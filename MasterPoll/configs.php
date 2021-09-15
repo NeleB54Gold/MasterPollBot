@@ -3,9 +3,9 @@
 if (isset($mpconfig)) unset($mpconfig);
 $mpconfig = new Configs([
 	'online'		=> true,
-	'parse_mode'	=> 'html',
+	'parse_mode'		=> 'html',
 	'password'		=> '',
-	'server_admins'	=> [
+	'server_admins'		=> [
 		123456789
 	],
 	'database'		=> [
@@ -30,7 +30,7 @@ $mpconfig = new Configs([
 		'DEBUG'			=> false
 	],
 	'limits'		=> [
-		'pollTitle'			=> 256,
+		'pollTitle'		=> 256,
 		'pollDescription'	=> 256,
 		'pollChoice'		=> 120,
 		'pollChoices'		=> 25,
@@ -41,7 +41,7 @@ $mpconfig = new Configs([
 	'oneskyapp'		=> [
 		'api-key'		=> '',
 		'secret'		=> '',
-		'platform-id'	=> 0,
+		'platform-id'		=> 0,
 		'file_name'		=> ''
 	]
 ]);
