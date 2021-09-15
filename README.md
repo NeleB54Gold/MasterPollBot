@@ -26,7 +26,7 @@ Create and manage advanced polls with this Telegram Bot which has many features 
 
 [👥 Telegram Chat](https://t.me/MasterPollChat)
 
-### About NeleBots
+## About NeleBots
 
 [📢 Telegram Channel](https://t.me/NeleBots)
 
