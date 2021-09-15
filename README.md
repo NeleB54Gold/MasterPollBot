@@ -10,7 +10,7 @@ Create and manage advanced polls with this Telegram Bot which has many features 
 
 1) Get a Bot API token from [@BotFather](https://t.me/BotFather) on Telegram.
 2) Edit the configs.php file and follow the instructions in it.
-3) Set the Telegram Bot [webhook](https://core.telegram.org/bots/api#setwebhook) on webhook.php with $\_GET variables: token with the Bot API token and (optional) the password.
+3) Set the Telegram Bot [webhook](https://core.telegram.org/bots/api#setwebhook) on webhook.php with $\_GET variables: _token_ with the Bot API token and (optional) the _password_.
 4) Start the Bot on Telegram and use the command /checkStatus and when is all at 100% you've done!
 5) Start creating poll on your new Master PollBot!
 
