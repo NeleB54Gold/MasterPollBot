@@ -33,7 +33,7 @@ if (in_array($update_type, ['inline_query', 'chosen_inline_result'])) {
 		$user = $db->getUser($update['message']['from']);
 	}
 	$langs = new Languages($user['lang'], $report);
-	require('/home/NeleBot/MasterPoll/commands/inlineCommands.php');
+	require('./commands/inlineCommands.php');
 } elseif (isset($update_type)) {
 	if (isset($update['message'])) {
 		$typechat = $update['message']['chat']['type'];
@@ -60,18 +60,18 @@ if (in_array($update_type, ['inline_query', 'chosen_inline_result'])) {
 	}
 	$langs = new Languages($user['lang'], $report);
 	if ($typechat == 'private') {
-		if ($isAdmin) require('/home/NeleBot/MasterPoll/commands/adminPanel.php');
-		require('/home/NeleBot/MasterPoll/commands/private.php');
+		if ($isAdmin) require('./commands/adminPanel.php');
+		require('./commands/private.php');
 	} elseif ($update['callback_query']['inline_message_id']) {
 	} elseif ($typechat == 'channel') {
-		require('/home/NeleBot/MasterPoll/commands/channels.php');
+		require('./commands/channels.php');
 	} elseif (in_array($typechat, ['group', 'supergroup'])) {
-		require('/home/NeleBot/MasterPoll/commands/groups.php');
+		require('./commands/groups.php');
 	} else {
 		$report->error('Unsupported chat type...', 'plainText');
 		die('Unsupported chat type...');
 	}
-	require('/home/NeleBot/MasterPoll/commands/globalCallback.php');
+	require('./commands/globalCallback.php');
 } else {
 	die('Unsupported update type...');
 }
