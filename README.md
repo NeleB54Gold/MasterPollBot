@@ -6,6 +6,15 @@
 
 Create and manage advanced polls with this Telegram Bot which has many features available!
 
+### Requirements
+
+- [Local Telegram Bot API](https://github.com/tdlib/telegram-bot-api) or a webhost with SSL to set the Bot [Webhook](https://core.telegram.org/bots/api#setwebhook). *[Required]*
+- PHP 7.*
+- PHP Extension: [cURL](https://www.php.net/manual/en/book.curl.php) *[Required]*
+- PHP Extension: [PDO](https://www.php.net/manual/en/book.pdo.php) *[Required]*
+- PHP Extension: [PDO PostgreSQL driver](https://www.php.net/manual/en/ref.pdo-pgsql) *[Required]*
+- PHP Extension: [Redis](https://github.com/phpredis/phpredis) *[Required]*
+
 ### How to setup
 
 1) Get a Bot API token from [@BotFather](https://t.me/BotFather) on Telegram.
