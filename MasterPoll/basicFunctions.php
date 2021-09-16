@@ -109,7 +109,7 @@ function shutdownHandler() {
 
 class basicFunctions 
 {
-	private $configs = [];
+	public $configs = [];
 	
 	public function __construct ($configs = []) {
 		$this->configs = $configs;
