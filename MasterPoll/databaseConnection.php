@@ -63,7 +63,7 @@ class MasterPollDatabase
 						}
 					} elseif ($table == 'groups') {
 						$q = $this->query('CREATE TABLE IF NOT EXISTS groups (
-							id				INT				PRIMARY KEY,
+							id			BIGINT(20)				PRIMARY KEY,
 							title			VARCHAR(64)		NOT NULL,
 							description		VARCHAR(256),
 							username		VARCHAR(32),
@@ -80,7 +80,7 @@ class MasterPollDatabase
 						}
 					} elseif ($table == 'channels') {
 						$q = $this->query('CREATE TABLE IF NOT EXISTS channels (
-							id				INT				PRIMARY KEY,
+							id			BIGINT(20)				PRIMARY KEY,
 							title			VARCHAR(64)		NOT NULL,
 							description		VARCHAR(256),
 							username		VARCHAR(32),
