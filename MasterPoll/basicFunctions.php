@@ -338,7 +338,7 @@ class ErrorReporting
 	public function error ($error, $type = 'plainText') {
 		if (!$this->configs['console_id']) return false;
 		if ($type == 'phpError') {
-			$error_message = $this->bf->textspecialchars($error['message']) . $this->bf->bold('\nString: ') . $error['line'] . $this->bf->bold('\nFile: ') . $error['file'];
+			$error_message = $this->bf->textspecialchars($error['message']) . PHP_EOL . $this->bf->bold('String: ') . $error['line'] . PHP_EOL . $this->bf->bold('File: ') . $error['file'];
 		} elseif ($type == 'PDOException') {
 			$error_message = 'PDOException: ' . $this->bf->code($error->getMessage());
 		} elseif ($type == 'PDOError') {
@@ -352,7 +352,7 @@ class ErrorReporting
 		} else {
 			$error_message = 'Unknown error report type: ' . json_encode($error);
 		}
-		$bot->sendMessage($this->configs['console_id'],  date('[c]') . '[MasterPoll]\n' . $error_message);
+		$this->bot->sendMessage($this->configs['console_id'],  date('[c]') . '[MasterPoll]' . PHP_EOL . $error_message);
 	}
 }
 
