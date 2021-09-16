@@ -117,6 +117,7 @@ class basicFunctions
 	
 	# Do automatic bold text with parse_mode
 	public function bold ($text, $parse_mode = 'def') {
+		global $configs;
 		if ($parse_mode === 'def') $parse_mode = $configs['parse_mode'];
 		$parse_mode = strtolower($parse_mode);
 		if (in_array($parse_mode, ['html', 'markdown', 'markdownv2'])) {
@@ -242,6 +243,7 @@ class basicFunctions
 	
 	# Like htmlspecialchars for both parse_mode
 	public function textspecialchars ($text, $parse_mode = 'def') {
+		global $configs;
 		if ($parse_mode === 'def') $parse_mode = $configs['parse_mode'];
 		$parse_mode = strtolower($parse_mode);
 		if (strtolower($parse_mode) == 'html') {
