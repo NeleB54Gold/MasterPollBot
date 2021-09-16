@@ -117,7 +117,7 @@ class basicFunctions
 	
 	# Do automatic bold text with parse_mode
 	public function bold ($text, $parse_mode = 'def') {
-		if ($parse_mode === 'def') $parse_mode = $configs['parse_mode'];
+		if ($parse_mode === 'def') $parse_mode = $this->configs['parse_mode'];
 		$parse_mode = strtolower($parse_mode);
 		if (in_array($parse_mode, ['html', 'markdown', 'markdownv2'])) {
 			if (strtolower($parse_mode) == 'html') {
@@ -136,7 +136,7 @@ class basicFunctions
 	
 	# Do automatic italic text with parse_mode
 	public function italic ($text, $parse_mode = 'def') {
-		if ($parse_mode === 'def') $parse_mode = $configs['parse_mode'];
+		if ($parse_mode === 'def') $parse_mode = $this->configs['parse_mode'];
 		$parse_mode = strtolower($parse_mode);
 		if (in_array($parse_mode, ['html', 'markdown', 'markdownv2'])) {
 			if (strtolower($parse_mode) == 'html') {
@@ -155,7 +155,7 @@ class basicFunctions
 	
 	# Do automatic code text with parse_mode
 	public function code ($text, $parse_mode = 'def') {
-		if ($parse_mode === 'def') $parse_mode = $configs['parse_mode'];
+		if ($parse_mode === 'def') $parse_mode = $this->configs['parse_mode'];
 		$parse_mode = strtolower($parse_mode);
 		if (in_array($parse_mode, ['html', 'markdown', 'markdownv2'])) {
 			if (strtolower($parse_mode) == 'html') {
@@ -174,7 +174,7 @@ class basicFunctions
 	
 	# Do automatic code text with parse_mode
 	public function prefix ($text, $parse_mode = 'def') {
-		if ($parse_mode === 'def') $parse_mode = $configs['parse_mode'];
+		if ($parse_mode === 'def') $parse_mode = $this->configs['parse_mode'];
 		$parse_mode = strtolower($parse_mode);
 		if (in_array($parse_mode, ['html', 'markdown', 'markdownv2'])) {
 			if (strtolower($parse_mode) == 'html') {
@@ -193,7 +193,7 @@ class basicFunctions
 	
 	# Do automatic text link with parse_mode
 	public function text_link ($text, $link, $parse_mode = 'def') {
-		if ($parse_mode === 'def') $parse_mode = $configs['parse_mode'];
+		if ($parse_mode === 'def') $parse_mode = $this->configs['parse_mode'];
 		$parse_mode = strtolower($parse_mode);
 		if (in_array($parse_mode, ['html', 'markdown', 'markdownv2'])) {
 			if (strtolower($parse_mode) == 'html') {
@@ -242,7 +242,7 @@ class basicFunctions
 	
 	# Like htmlspecialchars for both parse_mode
 	public function textspecialchars ($text, $parse_mode = 'def') {
-		if ($parse_mode === 'def') $parse_mode = $configs['parse_mode'];
+		if ($parse_mode === 'def') $parse_mode = $this->configs['parse_mode'];
 		$parse_mode = strtolower($parse_mode);
 		if (strtolower($parse_mode) == 'html') {
 			return htmlspecialchars($text);
