@@ -25,7 +25,7 @@ if ($_GET['password'] == $configs['password']) {
 	if ($content) {
 		$update = json_decode($content, true);
 		try {
-			if ($configs['online'] or $bot->bot_id == 937893103) {
+			if ($configs['online']) {
 				$db = new MasterPollDatabase($configs, $report, $bot);
 				fastcgi_finish_request();
 				require('/home/NeleBot/MasterPoll/bot.php');
