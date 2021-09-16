@@ -55,7 +55,7 @@ if (in_array($update_type, ['inline_query', 'chosen_inline_result'])) {
 		die;
 	}
 
-	if (isset($user['id']) and in_array($user['id'], $configs['server_admins'])) {
+	if (in_array($user['id'], $configs['server_admins'])) {
 		$isAdmin = true;
 	}
 	$langs = new Languages($user['lang'], $report);
