@@ -18,7 +18,7 @@ require_once('./configs.php');
 # Require the main functions
 $bf = new basicFunctions($configs);
 $bot = new TelegramFunctions($_GET['token']);
-$report = new ErrorReporting($configs, $bot);
+$report = new ErrorReporting($bf, $bot);
 
 if ($_GET['password'] == $configs['password']) {
 	$content = file_get_contents('php://input');
