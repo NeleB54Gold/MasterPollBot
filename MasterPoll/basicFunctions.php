@@ -330,7 +330,7 @@ class Configs
 class ErrorReporting
 {
 	function __construct ($bf, $bot) {
-		$this->bf = $br;
+		$this->bf = $bf;
 		$this->configs = $bf->configs;
 		$this->bot = $bot;
 	}
