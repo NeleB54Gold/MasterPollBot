@@ -1650,8 +1650,7 @@ if (isset($callback_data)) {
 											} elseif ($poll['type'] == 3) {
 												foreach ($poll['votes'] as $vote) {
 													if (!$poll['anonymous']) {
-														$tuser = $db->getUser(['id' => $vote['user_id']]);
-														$vuser = "👁‍🗨 " . htmlspecialchars($tuser['name']) . " [" . $bf->code($vote['user_id']) . "]\n";
+														$vuser = "👁‍🗨 " . htmlspecialchars($vote['cache_name']) . " [" . $bf->code($vote['user_id']) . "]\n";
 													}
 													$text .= "\n$vuser" . $bf->bold($vote['comment']) . "\n/delete_{$poll['id']}_{$vote['id']}\n";
 												}
