@@ -29,8 +29,6 @@ Create and manage advanced polls with this Telegram Bot which has many features 
 
 [⭐️ Rate on @BotsArchive](https://t.me/BotsArchive/134)
 
-[📲 Help with Translations](https://nelebots.oneskyapp.com/collaboration/translate/project/project/173195/)
-
 [📢 Telegram Channel](https://t.me/MasterPoll)
 
 [👥 Telegram Chat](https://t.me/MasterPollChat)
